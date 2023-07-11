@@ -1,9 +1,67 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".UI.DetailsActivity">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.DetailsActivity"
+    android:layout_margin="8dp">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/detailImageView"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:src="@drawable/apex"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/detailTitleTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:textSize="24sp"
+                app:fontFamily="@font/poppins_bold"
+                app:layout_constraintEnd_toEndOf="@id/detailImageView"
+                app:layout_constraintStart_toStartOf="@id/detailImageView"
+                app:layout_constraintTop_toBottomOf="@+id/detailImageView"
+                tools:text="Apex Legends" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/detailRatingTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:textSize="20sp"
+                app:fontFamily="@font/poppins_medium_italic"
+                app:layout_constraintEnd_toEndOf="@id/detailTitleTv"
+                app:layout_constraintStart_toStartOf="@id/detailTitleTv"
+                app:layout_constraintTop_toBottomOf="@+id/detailTitleTv"
+                tools:text="A - 9.5/10" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/detailDescriptionTv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:padding="8dp"
+                app:fontFamily="@font/poppins_medium"
+                app:layout_constraintEnd_toEndOf="@id/detailImageView"
+                app:layout_constraintStart_toStartOf="@+id/detailImageView"
+                app:layout_constraintTop_toBottomOf="@id/detailRatingTv"
+                tools:text="Provides a Material card.
+This class supplies Material styles for the card in the constructor. The widget will display the correct default Material styles without the use of a style flag.
+Stroke width can be set using the strokeWidth attribute. Set the stroke color using the strokeColor attribute. Without a strokeColor, the card will not render a stroked border, regardless of the strokeWidth value.
+Cards implement Checkable, a default way to switch to android:checked_state is not provided. Clients have to call setChecked(boolean). This shows the app:checkedIcon and changes the overlay color.
+Cards also have a custom state meant to be used when a card is draggable app:dragged_state. It's used by calling setDragged(boolean). This changes the overlay color and elevates the card to convey motion.
+Note: The actual view hierarchy present under MaterialCardView is NOT guaranteed to match the view hierarchy as written in XML. As a result, calls to getParent() on children of the MaterialCardView, will not return the MaterialCardView itself, but rather an intermediate View. If you need to access a MaterialCardView directly, set an android:id and use View.findViewById(int)." />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</layout>
