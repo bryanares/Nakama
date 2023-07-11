@@ -54,6 +54,7 @@
                     android:id="@+id/animeTitleTv"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_semibold"
                     android:text="Apex Legends"
                     android:textAppearance="?attr/textAppearanceHeadline6" />
 
@@ -62,6 +63,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
+                    android:fontFamily="@font/poppins_medium"
                     android:text="Description"
                     android:textAppearance="?attr/textAppearanceBody2"
                     android:textColor="?android:attr/textColorSecondary" />
@@ -71,6 +73,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
+                    android:fontFamily="@font/poppins_medium_italic"
                     android:text="Rating"
                     android:textAppearance="?attr/textAppearanceBody2"
                     android:textColor="?android:attr/textColorSecondary" />
@@ -90,6 +93,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
         android:layout_marginEnd="8dp"
+        android:fontFamily="@font/poppins_semibold"
         android:text="Refresh"
         app:layout_constraintEnd_toEndOf="@+id/animeCard"
         app:layout_constraintStart_toStartOf="@+id/animeCard"
