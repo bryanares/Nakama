@@ -41,7 +41,7 @@
                 android:layout_height="194dp"
                 android:contentDescription="Anime Picture"
                 android:scaleType="centerCrop"
-                app:srcCompat="@drawable/apex" />
+                app:srcCompat="@drawable/spiderman" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -64,9 +64,17 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
                     android:fontFamily="@font/poppins_medium"
-                    android:text="Description"
+                    android:text="Provides a Material card.
+This class supplies Material styles for the card in the constructor. The widget will display the correct default Material styles without the use of a style flag.
+Stroke width can be set using the strokeWidth attribute. Set the stroke color using the strokeColor attribute. Without a strokeColor, the card will not render a stroked border, regardless of the strokeWidth value.
+Cards implement Checkable, a default way to switch to android:checked_state is not provided. Clients have to call setChecked(boolean). This shows the app:checkedIcon and changes the overlay color.
+Cards also have a custom state meant to be used when a card is draggable app:dragged_state. It's used by calling setDragged(boolean). This changes the overlay color and elevates the card to convey motion.
+Note: The actual view hierarchy present under MaterialCardView is NOT guaranteed to match the view hierarchy as written in XML. As a result, calls to getParent() on children of the MaterialCardView, will not return the MaterialCardView itself, but rather an intermediate View. If you need to access a MaterialCardView directly, set an android:id and use View.findViewById(int)."
                     android:textAppearance="?attr/textAppearanceBody2"
-                    android:textColor="?android:attr/textColorSecondary" />
+                    android:textColor="?android:attr/textColorSecondary"
+                    android:maxLines="5"
+                    android:minLines="1"
+                    android:ellipsize="marquee"/>
 
                 <TextView
                     android:id="@+id/animeRatingTv"
