@@ -51,7 +51,8 @@ class MainActivity : AppCompatActivity() {
 //                .load(animeViewModel.anime.value?.data?.images?.jpg?.image_url)
 //                .into(binding.animeImageView)
 
-            Picasso.get().load(animeViewModel.anime.value?.data?.images?.jpg?.image_url)
+            Picasso.get().load(animeViewModel.anime.value?.data?.images?.webp?.image_url)
+                .resize(378, 330)
                 .into(binding.animeImageView)
             binding.animeTitleTv.text = animeViewModel.anime.value?.data?.title
             binding.animeDescTv.text = animeViewModel.anime.value?.data?.synopsis
