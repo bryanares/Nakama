@@ -13,25 +13,23 @@ import java.lang.Exception
 class AnimeViewModel : ViewModel() {
 
     private var _anime = MutableLiveData<anime>()
-    val anime :LiveData<anime> get() = _anime
+    val anime: LiveData<anime> get() = _anime
 
-//    val animeItem = anime.value?.data
+    //    val animeItem = anime.value?.data
     init {
         getAnime()
     }
 
-    fun getAnime() : MutableLiveData<anime>{
+    fun getAnime(): MutableLiveData<anime> {
         viewModelScope.launch {
             try {
                 _anime.value = RetrofitInstance.api.getAnime()
                 Log.d("viewModel", anime.value?.data.toString())
-            }catch (e: Exception){
-//                Log.e("ViewModel", e.toString())
+            } catch (e: Exception) {
+                Log.e("ViewModel", e.toString())
 
             }
         }
         return _anime
     }
-
-
 }
