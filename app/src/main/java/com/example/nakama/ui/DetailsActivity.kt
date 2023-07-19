@@ -2,7 +2,9 @@ package com.example.nakama.ui
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.net.toUri
 import com.example.nakama.databinding.ActivityDetailsBinding
+import com.squareup.picasso.Picasso
 
 class DetailsActivity : AppCompatActivity() {
     private lateinit var binding: ActivityDetailsBinding
@@ -19,7 +21,8 @@ class DetailsActivity : AppCompatActivity() {
         val animeRating = binding.detailRatingTv
 
         //receive the intent
-//        intent.getStringExtra("image")?.let { animeImage.setImageResource(it.toInt()) }
+        Picasso.get().load(intent.getStringExtra("image").toString().toUri()).into(animeImage)
+//        animeImage.setImageResource(intent.getStringExtra("image").toString().toInt())
         animeTitle.text = intent.getStringExtra("title").toString()
         animeDescription.text = intent.getStringExtra("description").toString()
         animeRating.text = intent.getStringExtra("rating").toString()
